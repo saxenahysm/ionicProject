@@ -29,3 +29,16 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+ion-content ion-button{
+  --color: #FFFFFF;
+  text-decoration-style: dotted;
+  line-height: 22px;
+  
+}
+ion-fab{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: end;
+  background-color: #FFFFFF;
+}

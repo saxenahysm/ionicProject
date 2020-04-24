@@ -1,0 +1,19 @@
+
+ion-content ion-label{
+    --color: rgb(168, 163, 163);
+    align-items: center;
+    text-align: left;
+  }
+
+ion-content{
+  background-color: rgb(27, 153, 226);
+}
+.detail {
+  display: flex;
+  justify-content: center;
+  color: rgb(1, 107, 139);
+  text-align: center;
+}
+.label{
+  padding-left: 28px;
+}
