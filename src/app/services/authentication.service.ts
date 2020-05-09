@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class AuthenticationService {
   authState = new BehaviorSubject(false);
+  
+
   constructor(
     private toast: ToastController,
     private router: Router,
@@ -32,7 +34,7 @@ export class AuthenticationService {
       user_name: 'test'
     };
     this.storage.set('USER_INFO', dummy_response).then((response) => {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['home']);
       this.authState.next(true);
     });
   }
@@ -47,5 +49,4 @@ export class AuthenticationService {
   isAuthenticated() {
     return this.authState.value;
   }
- 
-}
+ }

@@ -15,14 +15,20 @@ import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot()],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    IonicStorageModule.forRoot(),
+    Storage],
   providers: [
     StatusBar,
     SplashScreen,
-    // AuthGuardService,
-    // AuthenticationService,
-    // IonicStorageModule,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    AuthGuardService,
+    AuthenticationService,
+    IonicStorageModule,
+    Storage,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, }
   ],
   bootstrap: [AppComponent]
 })
