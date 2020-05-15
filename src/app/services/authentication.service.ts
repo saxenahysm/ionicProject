@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { ToastController, Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
-
+import { Storage } from '@ionic/storage'
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
   authState = new BehaviorSubject(false);
-  
+
 
   constructor(
     private toast: ToastController,
@@ -38,15 +38,15 @@ export class AuthenticationService {
       this.authState.next(true);
     });
   }
- 
+
   logout() {
     this.storage.remove('USER_INFO').then(() => {
       this.router.navigate(['login']);
       this.authState.next(false);
     });
   }
- 
+
   isAuthenticated() {
     return this.authState.value;
   }
- }
+}
